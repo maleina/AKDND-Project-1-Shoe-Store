@@ -21,4 +21,5 @@
         \n(8) Log out of the app from the toolbar in Shoe List screen. </string>
     <string name="Start">Start</string>
     <string name="Instructions">Instructions</string>
+    <string name="Shoe_List">Shoe List</string>
 </resources>
