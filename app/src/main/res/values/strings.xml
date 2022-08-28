@@ -20,4 +20,5 @@
         \n(7) Cancel adding new inventory by pressing on the Cancel button.
         \n(8) Log out of the app from the toolbar in Shoe List screen. </string>
     <string name="Start">Start</string>
+    <string name="Instructions">Instructions</string>
 </resources>
