@@ -11,4 +11,13 @@
         store more effectively. This app will help you store and view your entire inventory.
         On the next screen you will learn more about how to manage your inventory. Click the Next button below to continue.</string>
     <string name="Welcome">Welcome</string>
+    <string name="Instructions_Heading">Let\'s Get Started</string>
+    <string name="Instructions_Paragraph">(1) The Shoe List screen is a list of all of your inventory.
+        \n(2) Scroll through the list to see more items.
+        \n(3) Click on the + at the bottom of the screen to add inventory.
+        \n(4) Enter new inventory on Shoe Detail screen.
+        \n(5) Save new inventory by pressing on the Save button.
+        \n(7) Cancel adding new inventory by pressing on the Cancel button.
+        \n(8) Log out of the app from the toolbar in Shoe List screen. </string>
+    <string name="Start">Start</string>
 </resources>
