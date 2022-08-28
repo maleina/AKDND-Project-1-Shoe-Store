@@ -10,4 +10,5 @@
     <string name="Welcome_Paragraph">Welcome to your new shoe store. You have taken an important step in being able to manage your
         store more effectively. This app will help you store and view your entire inventory.
         On the next screen you will learn more about how to manage your inventory. Click the Next button below to continue.</string>
+    <string name="Welcome">Welcome</string>
 </resources>
