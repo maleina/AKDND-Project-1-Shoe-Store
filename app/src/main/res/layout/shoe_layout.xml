@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<data>
+    <variable
+        name="shoe"
+        type="com.udacity.shoestore.models.Shoe" />
+</data>
+    <!-- Constraint chosen to avoid multiple layers of nesting -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/name_label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/Name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@{shoe.name}"
+            app:layout_constraintBottom_toBottomOf="@+id/name_label_text"
+            app:layout_constraintStart_toEndOf="@+id/name_label_text"
+            tools:text="Air Max Plus" />
+
+        <TextView
+            android:id="@+id/size_label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/Size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_label_text" />
+
+        <TextView
+            android:id="@+id/size_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@{String.valueOf(shoe.size)}"
+            app:layout_constraintBottom_toBottomOf="@+id/size_label_text"
+            app:layout_constraintStart_toEndOf="@+id/size_label_text"
+            tools:text="8" />
+
+        <TextView
+            android:id="@+id/company_label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/Company"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/size_label_text" />
+
+        <TextView
+            android:id="@+id/company_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@{shoe.company}"
+            app:layout_constraintBottom_toBottomOf="@+id/company_label_text"
+            app:layout_constraintStart_toEndOf="@+id/company_label_text"
+            tools:text="Nike" />
+
+        <TextView
+            android:id="@+id/description_label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/Description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/company_label_text" />
+
+        <TextView
+            android:id="@+id/description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@{shoe.description}"
+            app:layout_constraintBottom_toBottomOf="@+id/description_label_text"
+            app:layout_constraintStart_toEndOf="@+id/description_label_text"
+            tools:text="Mens running shoe" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
