@@ -25,9 +25,7 @@ class ShoeListFragment : Fragment() {
         val binding : FragmentShoeListBinding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_shoe_list, container, false)
 
-        // set the view model and life cycle owner in order to use data
-        // binding to populate the shoe list
-        binding.viewModel = viewModel
+        // set life cycle owner in order to use data binding to populate the shoe list
         binding.lifecycleOwner = this
 
         // Add each shoe in the shoe list to the scrollable view

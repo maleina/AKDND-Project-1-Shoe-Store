@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="viewModel"
-            type="com.udacity.shoestore.models.ShoeStoreViewModel" />
-    </data>
-
     <!-- A constraint layout is the best option here for placing the scroll view with a floating action button -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
