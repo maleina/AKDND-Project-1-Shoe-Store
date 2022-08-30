@@ -15,7 +15,7 @@
     <string name="Instructions_Paragraph">(1) The Shoe List screen is a list of all of your inventory.
         \n(2) Scroll through the list to see more items.
         \n(3) Click on the + at the bottom of the screen to add inventory.
-        \n(4) Enter new inventory on Shoe Detail screen.
+        \n(4) Enter new inventory on the Add New Shoe screen.
         \n(5) Save new inventory by pressing on the Save button.
         \n(7) Cancel adding new inventory by pressing on the Cancel button.
         \n(8) Log out of the app from the toolbar in Shoe List screen. </string>
@@ -26,4 +26,7 @@
     <string name="Size">Size: </string>
     <string name="Company">Company: </string>
     <string name="Description">Description: </string>
+    <string name="Add_New_Shoe">Add New Shoe</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Save">Save</string>
 </resources>

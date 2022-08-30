@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.models.ShoeStoreViewModel
 import kotlinx.android.synthetic.main.shoe_layout.view.*
@@ -28,7 +29,7 @@ class ShoeListFragment : Fragment() {
         // set life cycle owner in order to use data binding to populate the shoe list
         binding.lifecycleOwner = this
 
-        // Add each shoe in the shoe list to the scrollable view
+        // Add each shoe to the scrollable shoe list
         viewModel.shoeList.observe(viewLifecycleOwner, Observer { shoeList ->
             shoeList.forEach { shoe ->
                 val listItem : View = inflater.inflate(R.layout.shoe_layout, null, false)
@@ -39,6 +40,10 @@ class ShoeListFragment : Fragment() {
                 binding.shoeListLayout.addView(listItem)
             }
         })
+
+        binding.addShoeButton.setOnClickListener{
+            findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
+        }
 
         return binding.root
     }
