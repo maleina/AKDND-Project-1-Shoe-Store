@@ -46,5 +46,11 @@
     <fragment
         android:id="@+id/shoeDetailFragment"
         android:name="com.udacity.shoestore.ShoeDetailFragment"
-        android:label="@string/Add_New_Shoe" />
+        android:label="@string/Add_New_Shoe" >
+        <action
+            android:id="@+id/action_shoeDetailFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment"
+            app:popUpTo="@id/shoeDetailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

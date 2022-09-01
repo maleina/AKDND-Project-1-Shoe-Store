@@ -3,6 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+        name="shoe"
+        type="com.udacity.shoestore.models.Shoe" />
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.models.ShoeStoreViewModel" />
+    </data>
+
     <!-- Constraint View used to avoid nesting multiple Linear Layouts -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -19,7 +28,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/detail_name_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -27,23 +36,24 @@
             android:layout_marginEnd="16dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:text="@={shoe.name}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detail_name_label_text"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <TextView
-            android:id="@+id/detail_company_label"
+            android:id="@+id/detail_company_label_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/Company"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintTop_toBottomOf="@+id/detail_name_edit_text" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/detail_company_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -51,23 +61,24 @@
             android:layout_marginEnd="16dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:text="@={shoe.company}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_company_label"
+            app:layout_constraintTop_toBottomOf="@+id/detail_company_label_text"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
-            android:id="@+id/detail_size_label"
+            android:id="@+id/detail_size_label_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/Size"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+            app:layout_constraintTop_toBottomOf="@+id/detail_company_edit_text" />
 
         <EditText
-            android:id="@+id/editTextNumberDecimal"
+            android:id="@+id/detail_size_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -75,23 +86,24 @@
             android:layout_marginEnd="16dp"
             android:ems="10"
             android:inputType="numberDecimal"
+            android:text="@={``+ shoe.size}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_size_label"
+            app:layout_constraintTop_toBottomOf="@+id/detail_size_label_text"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <TextView
-            android:id="@+id/detail_description_label"
+            android:id="@+id/detail_description_label_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/Description"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+            app:layout_constraintTop_toBottomOf="@+id/detail_size_edit_text" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/detail_description_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -99,9 +111,10 @@
             android:layout_marginEnd="16dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:text="@={shoe.description}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_description_label"
+            app:layout_constraintTop_toBottomOf="@+id/detail_description_label_text"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <Button
@@ -122,6 +135,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:text="@string/Save"
+            android:onClick="@{() -> viewModel.updateShoeList(shoe)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
