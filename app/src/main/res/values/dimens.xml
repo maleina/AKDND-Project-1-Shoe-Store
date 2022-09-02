@@ -5,4 +5,5 @@
     <dimen name="text_margin">16dp</dimen>
     <dimen name="heading_text_size">24sp</dimen>
     <dimen name="paragraph_text_size">16sp</dimen>
+    <dimen name="detail_label_width">80dp</dimen>
 </resources>
