@@ -12,7 +12,7 @@
             type="com.udacity.shoestore.models.ShoeStoreViewModel" />
     </data>
 
-    <!-- Constraint View used to avoid nesting multiple Linear Layouts -->
+    <!-- Constraint View used to avoid nesting multiple Linear Layouts in two column layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

@@ -29,4 +29,5 @@
     <string name="Add_New_Shoe">Add New Shoe</string>
     <string name="Cancel">Cancel</string>
     <string name="Save">Save</string>
+    <string name="Logout">Logout</string>
 </resources>

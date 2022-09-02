@@ -22,11 +22,19 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         navController = this.findNavController(R.id.myNavHostFragment)
+
+        // Need this to display options menu in toolbar
+        setSupportActionBar(toolbar)
+
+        // Set up the navigation bar using top level fragements to remove the back button from
+        // both login and the shoe list fragments
         val topLevelFragments = setOf(R.id.loginFragment, R.id.shoeListFragment)
         appBarConfiguration = AppBarConfiguration(topLevelFragments)
         NavigationUI.setupWithNavController(toolbar, navController, appBarConfiguration)
+
         Timber.plant(Timber.DebugTree())
     }
 }
